@@ -1,0 +1,179 @@
+CeMiA Features Dictionary
+
+*** Mitochondria Level Measurements ***
+
+mito_area:
+•	Area of each mitochondrion
+
+mito_centroid
+•	Position of each mitochondrion
+
+mito_eccentricity
+•	Eccentricity of the ellipse with the same second-moments as the mitochondrion, and it is 	defined the ratio of the focal distance of the ellipse over the major axis length. 
+
+mito_equi_diameter
+•	The diameter of a circle with the same area as the mitochondrion.
+
+mito_euler_number
+•	Euler characteristic of the mitochondrion. Computed as 1 - number of holes in the 
+	mitochondrion
+
+mito_extent
+•	Ratio of the area of the mitochondrion to the area of its bounding box.
+
+mito_major_axis
+•	The length of the major axis of the ellipse that has the same normalized second moments 	as the mitochondrion.
+
+mito_minor_axis
+•	The length of the minor axis of the ellipse that has the same normalized second moments 	as the mitochondrion.
+
+mito_orientation
+•	Angle between the horizontal line and the major axis of the ellipse that has the same second moments as the mitochondrion, ranging from - π/2 to π/2 counter-clockwise.
+
+mito_perimeter
+•	Perimeter of the mitochondrion.
+
+mito_solidity
+•	Ratio of the area of each mitochondrion to the area of the convex hull surrounding the 
+	mitochondrion.
+
+mito_centroid_x 
+•	Distance of the mitochondrion center from the center of the nucleus in the corresponding 	 cell in the X direction.
+
+mito_centroid_y
+•	Distance of the mitochondrion center from the center of the nucleus in the corresponding 	cell in the Y direction.
+
+mito_distance
+•	Euclidian distance of the mitochondrion center from the center of the nucleus in the 	
+	corresponding cell.
+
+mito_weighted_cent_x
+•	Distance of the mitochondrion center from the center of the nucleus in the corresponding 	 cell in the X direction, weighted by mitochondrion area.
+
+mito_weighted_cent_y
+•	Distance of the mitochondrion center from the center of the nucleus in the corresponding 
+	cell in the Y direction, weighted by mitochondrion area.
+
+mito_weighted_distance
+•	Euclidian distance of the mitochondrion center from the center of the nucleus in the corresponding cell, weighted by mitochondrion area.
+
+mito_form_factor
+•	[(1/4π).( mito_perimeter^2/mito_area)] 
+
+mito_roundness
+•	 [4(mito_area)/(π.mito_major_axis^2)]
+
+mito_branch_count
+•	Number of branches in the skeleton of the mitochondrion
+
+mito_total_branch_length
+•	Total length of the branches in the skeleton of the mitochondrion.
+
+mito_mean_branch_length
+•	Average length of the branches in the skeleton of the mitochondrion.
+
+mito_median_branch_length
+•	Median length of the branches in the skeleton of the mitochondrion.
+
+mito_std_branch_length
+•	Standard deviation of the lengths of the branches in the skeleton of the mitochondrion.
+
+mito_mean_branch_angle
+•	Average angle of the branches in the skeleton of the mitochondrion.
+
+mito_median_branch_angle
+•	median angle of the branches in the skeleton of the mitochondrion.
+
+mito_std_branch_angle
+•	Standard deviation of the angles of the branches in the skeleton of the mitochondrion.
+
+mito_total_density
+•	Sum of the distances of the pixels in each mitochondrion from the boundary of the 	
+	mitochondrion. This feature is an alternative method for measuring the size each mitochondrion.
+
+mito_average_density
+•	average of the distances of the pixels in each mitochondrion from the boundary of the 	
+	mitochondrion. This feature effectively measures the width of each mitochondrion.
+
+mito_median_density
+•	median of the distances of the pixels in each mitochondrion from the boundary of the mitochondrion. This feature effectively measures the width of the mitochondrion.
+
+***Cell Level Measurements***
+
+**Mitochondrial aggregate measurements**
+
+cell_mean_mito_FEATURE
+•	Average of the FEATURE distribution from all the mitochondria in the cell.
+
+cell_median_mito_FEATURE
+•	Average of the FEATURE distribution from all the mitochondria in the cell
+
+cell_std_mito_FEATURE
+•	Standard deviation of the FEATURE distribution from all the mitochondria in the cell
+
+**Cell level measurements based on mitochondria distribution**
+
+cell_kurtosis_x
+•	Kurtosis of mitochondria distribution across the cell in X direction.
+
+cell_weighted_kurtosis_x
+•	Kurtosis of mitochondria distribution across the cell in X direction, with distances 
+	normalized by the mitochondrial area
+
+cell_kurtosis_y
+•	Kurtosis of mitochondria distribution across the cell in Y direction
+
+cell_weighted_kurtosis_y
+•	Kurtosis of mitochondria distribution across the cell in Y direction, with distances 	
+	normalized by the mitochondrial area
+
+cell_kurtosis_squared
+•	Kurtosis of mitochondria distribution across the cell
+
+cell_weighted_kurtosis_squared 
+•	Kurtosis of mitochondria distribution across the cell, with distances normalized by the 
+	mitochondrial area
+
+cell_skewness_x
+•	Skewness of mitochondria distribution across the cell in X direction.
+
+cell_weighted_skewness_x
+•	Skewness of mitochondria distribution across the cell in X direction, with distances 	
+	normalized by the mitochondrial area.
+
+cell_skewness_y
+•	Skewness of mitochondria distribution across the cell in Y direction
+
+cell_weighted_skewness_y
+•	Skewness of mitochondria distribution across the cell in Y direction, with distances 	
+	normalized by the mitochondrial area
+
+cell_skewness_squared
+•	Skewness of mitochondria distribution across the cell
+
+cell_weighted_skewness_squared 
+•	Skewness of mitochondria distribution across the cell, with distances normalized by the 
+	mitochondrial area
+
+cell_network_major_axis
+•	The length of the major axis of the ellipse that has the same second moments as the 	
+	convex hull from the distribution of the mitochondria across the cell (as a simple estimation of cytoplasm)
+
+cell_network_minor_axis
+•	The length of the minor axis of the ellipse that has the same second moments as the 	
+	convex hull from the distribution of the mitochondria across the cell (as a simple estimation of cytoplasm)
+
+cell_network_orientation
+•	Angle between the horizontal line and the major axis of the ellipse that has the same 
+	second moments as the convex hull from the distribution of the mitochondria across the cell (as a simple estimation of cytoplasm), ranging from -pi/2 to pi/2 counter-clockwise.
+
+cell_network_eccentricity
+•	Eccentricity of the ellipse with the same second-moments as the convex hull from the 
+	distribution of the mitochondria across the cell, and it is defined the ratio of the focal distance of the ellipse over the major axis length.
+
+cell_network_effective_solidity
+•	Total mitochondria area in the cell, divided by the area of the convex hull from the 
+	distribution of the mitochondria across the cell.
+
+cell_network_fractal_dimension
+•	The fractal dimension of the mitochondrial network in the cell.
