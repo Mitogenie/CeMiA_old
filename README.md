@@ -93,8 +93,9 @@ MiA uses the binarized mitochondrial network to perform greater than 100 mitocho
         - Example: 
             - cell_std_mito_area: Standard deviation of the area among all the mitochondria in the cell.
 
+###### Cell level measurements based on mitochondria distribution
+- These features have the following format: cell_<feature name> and are aggregate measurements.
+    - Examples:
+        - Fractal dimension of the mitochondrial network of the cell: cell_network_fractal_dimension
+
 Details of all the features measured by MiA can be found here: [Features Dictionary.txt](https://github.com/Mitogenie/CeMiA/blob/master/Features%20Dictionary.txt)
-
-
-
-
