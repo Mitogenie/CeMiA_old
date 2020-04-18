@@ -99,3 +99,16 @@ MiA uses the binarized mitochondrial network to perform greater than 100 mitocho
         - Fractal dimension of the mitochondrial network of the cell: cell_network_fractal_dimension
 
 Details of all the features measured by MiA can be found here: [Features Dictionary.txt](https://github.com/Mitogenie/CeMiA/blob/master/Features%20Dictionary.txt)
+
+#### Libraries used for development (A/Z)
+- copy
+- cv2
+- datetime
+- math
+- matplotlib.pyplot
+- numpy
+- os
+- pandas
+- random
+- scipy
+- skimage
