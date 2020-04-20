@@ -78,8 +78,8 @@ MiA uses the binarized mitochondrial network to perform greater than 100 mitocho
 ###### Development
 - 4500+ images were used to develop and test MiA.
 
-#### Nuc Adder
-Cell Catcher, and Mito Miner require RGB images of the cells, where nuclei are stained with DAPI. They use nuceli to to estimate the background intensity in each cell. However, in some images, nuclei staining is not available. By using Nuc Adder, you can transfrom your images and adapt them for tools in CeMiA. Nuc Adder, simply adds a circle as a synthetic nuclei to gather mitochondrial background info from each cell.
+#### Nuc Adder (Optional Tool)
+Cell Catcher, and Mito Miner require RGB images of the cells, where nuclei are stained with DAPI. They use nuceli boundary to estimate the background intensity in each cell. However, in some images, nuclei staining is not available. By using Nuc Adder, you can transfrom your images and adapt them for tools in CeMiA. Nuc Adder, simply adds a circle as a synthetic nuclei to gather mitochondrial background info from each cell.
 
 ###### What to know before use
 - Input: Standard RGB Tiff images
