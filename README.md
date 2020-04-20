@@ -9,6 +9,8 @@
   - ##### Cell Catcher
   - ##### Mito Miner
   - ##### MiA
+  - ##### Nuc Adder
+  
 
 ###### User Interface
 All the tools in CeMiA toolkit offer interactive, semi graphical user interface through Jupyter notebooks.
@@ -33,16 +35,17 @@ Cell Catcher is a tool designed to automatically detect, separate, and isolate i
         - Number of stains: 2 
             - Nuclei should be stained with DAPI
 - Output: Single-cell fluorescence images (Standard RGB Tiff)
-    - Output images can used as input for Mito Tracker to extract their mitochondrial network, or they can be independently used to train the desired ML or NN models where appropriate. 
+    - Output images can used as input for Mito Miner to extract their mitochondrial network, or they can be independently used to train the desired ML or NN models where appropriate. 
 
 ###### Instructions
-- Run Cell Catcher.ipynb using Jupyter notebook.
+- Run Cell_Catcher.ipynb using Jupyter notebook.
     - You may find this video on Jupyter notebooks very helpful: [Watch Here](https://youtu.be/HW29067qVWk)
         - Note: We are not affiliated with the owner of the above video. We just found this video on Jupyter notebooks very helpful, There are plenty of great tutorials about this subject, and you may use any source your prefer.
 - The Jupyter notebook file provides the users with step-by-step instructions to analyze their data.
 
 ###### Development
 - 500+ images were used to develop and test Cell Catcher.
+
 #### Mito Miner
 Mito Miner is a tool to segment mitochondrial netwrok in the cells. It uses the statistical distribution of pixel intensities across the mitochondrial network to detect and remove background noise from the cell and segment the mitochondrial network. Additionally, this tool can further improve the accuracy of the mitochondrial network segmentation through an optional adaptive correction, which takes the variation in the efficiency of fluorescence staining across each cell into account to enhance mitochondrial segmentation. 
 ###### What to know before use
@@ -53,12 +56,13 @@ Mito Miner is a tool to segment mitochondrial netwrok in the cells. It uses the 
 - Output: Single-cell binary images of mitochondrial network
     - Output images can used as input for MiA to quantify their mitochondrial network, or they can be independently used to train the desired ML or NN models where appropriate. 
 ###### Instructions:
-- Run Mito Miner.ipynb using Jupyter notebook.
+- Run Mito_Miner.ipynb using Jupyter notebook.
     - You may find this video on Jupyter notebooks very helpful: [Watch Here](https://youtu.be/HW29067qVWk)
         - Note: We are not affiliated with the owner of the above video. We just found this video on Jupyter notebooks very helpful, There are plenty of great tutorials about this subject, and you may use any source your prefer.
 - The Jupyter notebook file provides the users with step-by-step instructions to analyze their data.
 ###### Development
 - 7500+ images were used to develop and test Mito Miner.
+
 #### MiA (Mitochondrial Analyzer)
 MiA uses the binarized mitochondrial network to perform greater than 100 mitochondria-level and cell-level morphometric measurements. 
 ###### What to know before use
@@ -67,12 +71,32 @@ MiA uses the binarized mitochondrial network to perform greater than 100 mitocho
     - Why raw data along with aggregate measurements?
         - Flexibility! By providing raw data, users can limit or aggregate their data using their own criteria on each mitochondrial, or sub mitochondrial measurements, which can provide additional insight based on their specific applications.
 ###### Instructions:
-- Run Mito Miner.ipynb using Jupyter notebook.
+- Run MiA.ipynb using Jupyter notebook.
     - You may find this video on Jupyter notebooks very helpful: [Watch Here](https://youtu.be/HW29067qVWk)
         - Note: We are not affiliated with the owner of the above video. We just found this video on Jupyter notebooks very helpful, There are plenty of great tutorials about this subject, and you may use any source your prefer.
 - The Jupyter notebook file provides the users with step-by-step instructions to analyze their data.
 ###### Development
 - 4500+ images were used to develop and test MiA.
+
+#### Nuc Adder
+Cell Catcher, and Mito Miner require RGB images of the cells, where nuclei are stained with DAPI. They use nuceli to to estimate the background intensity in each cell. However, in some images, nuclei staining is not available. By using Nuc Adder, you can transfrom your images and adapt them for tools in CeMiA. Nuc Adder, simply adds a circle as a synthetic nuclei to gather mitochondrial background info from each cell.
+
+###### What to know before use
+- Input: Standard RGB Tiff images
+    - Single- or Multi-cell fluorescence images
+        - Number of stains: 1 
+            - The stanied channel should be red or green.
+- Output: Multi- or Single-cell fluorescence images (Standard RGB Tiff)
+    - Output images with synthetic nuclei can used as input for Mito Miner or Cell Catcher. 
+
+###### Instructions
+- Run Nuc_Adder.ipynb using Jupyter notebook.
+    - You may find this video on Jupyter notebooks very helpful: [Watch Here](https://youtu.be/HW29067qVWk)
+        - Note: We are not affiliated with the owner of the above video. We just found this video on Jupyter notebooks very helpful, There are plenty of great tutorials about this subject, and you may use any source your prefer.
+- The Jupyter notebook file provides the users with step-by-step instructions to analyze their data.
+
+###### Development
+- 10+ images were used to develop and test Cell Catcher.
 
 #### Nomenclature of Features
 ##### Mitochondria Level Measurements
