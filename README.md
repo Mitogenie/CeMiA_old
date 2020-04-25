@@ -126,6 +126,27 @@ Cell Catcher, and Mito Miner require RGB images of the cells, where nuclei are s
 
 Details of all the features measured by MiA can be found here: [Features Dictionary.txt](https://github.com/Mitogenie/CeMiA/blob/master/Features%20Dictionary.txt)
 
+#### Tree Structure of the files and folders
+
+```sh
+Project Folder
+├── *.tif (Original images in the project)
+├── output
+│   ├── to_analyze
+│   │          ├── *.tif  (All the files to be analyzed by Mito Miner)
+│   ├── to_discard
+│   │          ├── *.tif  (These files did not pass the initial quality check by Cell Catcher)
+│   └── processed
+│              └── single_cells_binary
+│                               ├── *_binarized.tif (Binarized images by Mito Miner)
+│                               └── *.tif  (Single cells isolated by Cell Catcher)
+│
+├── cell_catcher_params.csv
+├── mito_miner_params.csv
+└── cell_catcher_temp (Can optionally be deleted after using Cell Catcher) 
+```
+
+
 #### Libraries used for development (A/Z)
 - copy
 - cv2
@@ -137,26 +158,6 @@ Details of all the features measured by MiA can be found here: [Features Diction
 - pandas
 - random
 - scipy
+- shutil
 - skimage
 
-
-```sh
-├── app
-│   ├── css
-│   │   ├── **/*.css
-│   ├── favicon.ico
-│   ├── images
-│   ├── index.html
-│   ├── js
-│   │   ├── **/*.js
-│   └── partials/template
-├── dist (or build)
-├── node_modules
-├── bower_components (if using bower)
-├── test
-├── Gruntfile.js/gulpfile.js
-├── README.md
-├── package.json
-├── bower.json (if using bower)
-└── .gitignore
-```
