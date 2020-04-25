@@ -129,23 +129,39 @@ Details of all the features measured by MiA can be found here: [Features Diction
 #### Tree Structure of the files and folders
 
 ```sh
-Project Folder/
+your_project_folder/ (Name of you project folder)
 ├── *.tif (Original images in the project)
 ├── output/
-│   ├── to_analyze/
-│   │          ├── *.tif  (All the files to be analyzed by Mito Miner)
-│   ├── to_discard/
-│   │          ├── *.tif  (These files did not pass the initial quality check by Cell Catcher)
-│   └── processed/
-│              └── single_cells_binary/
-│                               ├── *_binarized.tif (Binarized images by Mito Miner)
-│                               └── *.tif  (Single cells isolated by Cell Catcher)
+│     ├── to_analyze/
+│     │          ├── *.tif  (Cell Catcher Output/Mito Miner input files)
+│     ├── to_discard/
+│     │          ├── *.tif  (These files did not pass the initial quality check by Cell Catcher)
+│     └── processed/
+│                └── single_cells_binary/
+│                                 ├── *_binarized.tif (Mito Miner output/MiA input files)
+│                                 └── *.tif  (Single cells isolated by Cell Catcher)
 │
+├── transformed/
+│             ├── *.tif  (Cells with synthetic nucleii) (Optional Tool)
 ├── cell_catcher_params.csv
 ├── mito_miner_params.csv
+├── Mia_output_file.csv (Named by user)
 └── cell_catcher_temp/ (Can optionally be deleted after using Cell Catcher) 
 ```
 
+##### Different Apps Input/Output Folders:
+- Cell Catcher: 
+  - Input: your_project_folder/
+  - Output: your_project_folder/output/to_analyze
+- Mito Miner: 
+  - Input: your_project_folder/output/to_analyze
+  - Output: your_project_folder/output/processed/single_cells_binary/
+- MiA
+  - Input: your_project_folder/output/processed/single_cells_binary/
+  - Output: your_project_folder/
+- Nuc Adder
+  - Input: your_project_folder/
+  - Output: your_project_folder/transformed
 
 #### Libraries used for development (A/Z)
 - copy
