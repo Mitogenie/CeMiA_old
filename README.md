@@ -129,21 +129,21 @@ Details of all the features measured by MiA can be found here: [Features Diction
 #### Tree Structure of the files and folders
 
 ```sh
-Project Folder
+Project Folder/
 ├── *.tif (Original images in the project)
-├── output
-│   ├── to_analyze
+├── output/
+│   ├── to_analyze/
 │   │          ├── *.tif  (All the files to be analyzed by Mito Miner)
-│   ├── to_discard
+│   ├── to_discard/
 │   │          ├── *.tif  (These files did not pass the initial quality check by Cell Catcher)
-│   └── processed
-│              └── single_cells_binary
+│   └── processed/
+│              └── single_cells_binary/
 │                               ├── *_binarized.tif (Binarized images by Mito Miner)
 │                               └── *.tif  (Single cells isolated by Cell Catcher)
 │
 ├── cell_catcher_params.csv
 ├── mito_miner_params.csv
-└── cell_catcher_temp (Can optionally be deleted after using Cell Catcher) 
+└── cell_catcher_temp/ (Can optionally be deleted after using Cell Catcher) 
 ```
 
 
