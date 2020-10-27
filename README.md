@@ -1,4 +1,4 @@
-# CeMiA
+# CeMiA (Depreciated)
 [![N|Solid](https://raw.githubusercontent.com/Mitogenie/CeMiA/master/misc/KLab.png)](https://mic.med.virginia.edu/kashatus/)
 
 ### Cellular Mitochondrial Analyzer 
